@@ -19,7 +19,7 @@ public class StudentController {
 
 	    List<Map<String, Object>> logs =
 	        jdbcTemplate.queryForList(
-	            "SELECT * FROM student_audit ORDER BY action_time DESC"
+	        		"SELECT * FROM student_audit ORDER BY created_at DESC"
 	        );
 
 	    map.addAttribute("logs", logs);
