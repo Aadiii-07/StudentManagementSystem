@@ -12,12 +12,11 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: 50px auto;
+    width: 400px;
+    margin-top: 80px;
+    margin-left: 320px;
     background: white;
-    padding: 20px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-    border-radius: 10px;
+    padding: 25px;
 }
 
 h2 {

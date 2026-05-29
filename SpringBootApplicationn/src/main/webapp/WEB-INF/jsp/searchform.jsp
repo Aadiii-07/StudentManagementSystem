@@ -1,7 +1,12 @@
 <head>
 <style>
-.container {width:400px;margin:80px auto;background:white;padding:25px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);border-radius:10px;}
+.container {
+    width: 400px;
+    margin-top: 80px;
+    margin-left: 320px;
+    background: white;
+    padding: 25px;
+}
 input{width:100%;padding:10px;margin:10px 0;}
 button{width:100%;padding:10px;background:#007bff;color:white;border:none;}
 button:hover{background:#0056b3;}
@@ -10,7 +15,7 @@ button:hover{background:#0056b3;}
 
 <body>
 
-<jsp:include page="welcome.jsp"/>
+<jsp:include page="sidebar.jsp"/>
 
 <div class="container">
 <h2>Search Student</h2>

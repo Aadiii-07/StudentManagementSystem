@@ -7,11 +7,10 @@ pageEncoding="ISO-8859-1"%>
 body {font-family: Arial; background:#eef2f7;}
 .container {
     width: 400px;
-    margin: 80px auto;
+    margin-top: 80px;
+    margin-left: 320px;
     background: white;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 }
 
 input[type=text] {
@@ -37,7 +36,7 @@ button:hover {
 
 <body>
 
-<jsp:include page="welcome.jsp"/>
+<jsp:include page="sidebar.jsp"/>
 
 <div class="container">
 

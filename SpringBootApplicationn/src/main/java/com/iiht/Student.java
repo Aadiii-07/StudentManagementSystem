@@ -1,20 +1,17 @@
 package com.iiht;
 
 public class Student {
+
     private String sid;
     private String sname;
     private String saddr;
-    private String aud;
+    private String email;
+    private String mobile;
+    private String password;
+    private int courseId;
+    private String status;
 
-    public String getAud() {
-		return aud;
-	}
-
-	public void setAud(String aud) {
-		this.aud = aud;
-	}
-
-	public String getSid() {
+    public String getSid() {
         return sid;
     }
 
@@ -36,5 +33,45 @@ public class Student {
 
     public void setSaddr(String saddr) {
         this.saddr = saddr;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

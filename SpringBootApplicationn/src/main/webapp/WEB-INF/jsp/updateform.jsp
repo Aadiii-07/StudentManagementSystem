@@ -10,6 +10,13 @@ body {
     font-family: Arial;
     background: #eef2f7;
 }
+.container {
+    width: 400px;
+    margin-top: 80px;
+    margin-left: 320px;
+    background: white;
+    padding: 25px;
+}
 
 .box {
     width: 400px;
@@ -49,7 +56,7 @@ input[type=submit]:hover {
 
 <body>
 
-<jsp:include page="welcome.jsp"/>
+<jsp:include page="sidebar.jsp"/>
 
 <div class="box">
 

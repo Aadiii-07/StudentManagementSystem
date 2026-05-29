@@ -21,7 +21,7 @@ body {font-family: Arial; background:#f4f6f9;}
 
 <body>
 
-<jsp:include page="welcome.jsp"/>
+<jsp:include page="sidebar.jsp"/>
 
 <div class="box">
     Student Not Found ❌

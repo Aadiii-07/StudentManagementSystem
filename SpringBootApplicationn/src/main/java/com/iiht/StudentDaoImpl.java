@@ -38,6 +38,26 @@ public class StudentDaoImpl implements StudentDao {
         return status;
     }
     @Override
+    public List<Student> getAllStudents() {
+
+        return jdbcTemplate.query(
+
+                "SELECT * FROM student",
+
+                (rs, rowNum) -> {
+
+                    Student std = new Student();
+
+                    std.setSid(rs.getString("sid"));
+                    std.setSname(rs.getString("sname"));
+                    std.setSaddr(rs.getString("saddr"));
+                    std.setEmail(rs.getString("email"));
+                    std.setMobile(rs.getString("mobile"));
+
+                    return std;
+                });
+    }
+    @Override
     public Student search(String sid) {
  
         List<Student> list = jdbcTemplate.query(
@@ -103,5 +123,48 @@ public class StudentDaoImpl implements StudentDao {
         );
 
         return status;
+    }
+    @Override
+    public String signup(Student std) {
+
+        int row = jdbcTemplate.update(
+            "INSERT INTO student(sid,sname,saddr,email,mobile,password,course_id,status) VALUES(?,?,?,?,?,?,?,?)",
+
+            std.getSid(),
+            std.getSname(),
+            std.getSaddr(),
+            std.getEmail(),
+            std.getMobile(),
+            std.getPassword(),
+            std.getCourseId(),
+            "ACTIVE"
+        );
+
+        return row > 0 ? "success" : "failure";
+    }
+    @Override
+    public Student loginStudent(String username, String password) {
+
+        List<Student> list = jdbcTemplate.query(
+
+            "SELECT * FROM student WHERE (email=? OR mobile=?) AND password=?",
+
+            new Object[] { username, username, password },
+
+            (rs, rowNum) -> {
+
+                Student std = new Student();
+
+                std.setSid(rs.getString("sid"));
+                std.setSname(rs.getString("sname"));
+                std.setSaddr(rs.getString("saddr"));
+                std.setEmail(rs.getString("email"));
+                std.setMobile(rs.getString("mobile"));
+                std.setPassword(rs.getString("password"));
+
+                return std;
+            });
+
+        return list.isEmpty() ? null : list.get(0);
     }
 }

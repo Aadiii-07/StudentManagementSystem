@@ -25,7 +25,7 @@ body {
 
 <body>
 
-<jsp:include page="welcome.jsp"/>
+<jsp:include page="sidebar.jsp"/>
 
 <div class="box">
     ${operation} SUCCESS 

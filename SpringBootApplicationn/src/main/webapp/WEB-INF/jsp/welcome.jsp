@@ -1,5 +1,3 @@
-
-
 <html>
 <head>
 
@@ -11,7 +9,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial;
+    font-family:Arial,sans-serif;
 }
 
 body{
@@ -30,7 +28,7 @@ body{
     padding-left:30px;
     font-size:28px;
     font-weight:bold;
-    box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
 }
 
 /* MAIN LAYOUT */
@@ -42,10 +40,20 @@ body{
 /* SIDEBAR */
 
 .sidebar{
-    width:250px;
-    height:100vh;
+    width:300px;
+    min-height:calc(100vh - 70px);
     background:#1e293b;
-    padding-top:30px;
+    padding-top:20px;
+}
+
+/* SIDEBAR HEADINGS */
+
+.sidebar h3{
+    color:#60a5fa;
+    padding-left:20px;
+    margin-top:25px;
+    margin-bottom:10px;
+    font-size:18px;
 }
 
 /* MENU LINKS */
@@ -54,10 +62,10 @@ body{
     display:block;
     color:white;
     text-decoration:none;
-    padding:15px 25px;
-    margin:10px;
+    padding:15px 20px;
+    margin:8px 10px;
     border-radius:8px;
-    transition:0.3s;
+    transition:.3s;
     font-size:17px;
 }
 
@@ -66,14 +74,15 @@ body{
     transform:translateX(5px);
 }
 
-/* CONTENT AREA */
+/* CONTENT */
 
 .content{
-    flex:1;
+    margin-left:250px;
     padding:40px;
+    width:100%;
 }
 
-/* DASHBOARD CARDS */
+/* CARDS */
 
 .cards{
     display:flex;
@@ -82,16 +91,11 @@ body{
 }
 
 .card{
-    width:220px;
+    width:250px;
     background:white;
     padding:25px;
     border-radius:12px;
-    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
 .card h2{
@@ -107,11 +111,11 @@ body{
 /* WELCOME BOX */
 
 .welcome-box{
-    margin-top:40px;
+    margin-top:30px;
     background:white;
     padding:30px;
     border-radius:12px;
-    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
 .welcome-box h1{
@@ -122,7 +126,7 @@ body{
 .welcome-box p{
     font-size:18px;
     color:#444;
-    line-height:1.6;
+    line-height:1.7;
 }
 
 </style>
@@ -131,68 +135,49 @@ body{
 
 <body>
 
-<!-- HEADER -->
-
 <div class="header">
     Student Management System
 </div>
 
-<!-- MAIN SECTION -->
-
 <div class="main">
 
-    <!-- SIDEBAR -->
+<jsp:include page="sidebar.jsp"/>
 
-<div class="sidebar">
+<div class="content">
 
-    <a href="/welcomepage">Dashboard</a>
+    <div class="cards">
 
-    <a href="/addform">Add Student</a>
-
-    <a href="/searchform">Search Student</a>
-
-    <a href="/updateform">Update Student</a>
-
-    <a href="/deleteform">Delete Student</a>
-
-    <a href="/audit">Audit Logs</a>
-
-</div>
-
-    <!-- CONTENT -->
-
-    <div class="content">
-
-       <div class="card">
-    <h2>Student</h2>
-    <p>Management System</p>
-</div>
-
-<div class="card">
-    <h2>Spring Boot</h2>
-    <p>CRUD Operations</p>
-</div>
-
-<div class="card">
-    <h2>MySQL</h2>
-    <p>Database Connected</p>
-</div>
-
+        <div class="card">
+            <h2>Student</h2>
+            <p>Management System</p>
         </div>
 
-        <div class="welcome-box">
+        <div class="card">
+            <h2>Spring Boot</h2>
+            <p>CRUD Operations</p>
+        </div>
 
-            <h1>Welcome Admin </h1>
-
-            <p>
-                This is your Student Management Dashboard.
-                You can manage student records, search details,
-                update information, delete records and monitor audit logs.
-            </p>
-
+        <div class="card">
+            <h2>MySQL</h2>
+            <p>Database Connected</p>
         </div>
 
     </div>
+
+    <div class="welcome-box">
+
+        <h1>Welcome Admin</h1>
+
+        <p>
+            This is your Student Management Dashboard.
+            You can manage students, attendance,
+            courses, subjects, marks and audit logs
+            from a single platform.
+        </p>
+
+    </div>
+
+</div>
 
 </div>
 

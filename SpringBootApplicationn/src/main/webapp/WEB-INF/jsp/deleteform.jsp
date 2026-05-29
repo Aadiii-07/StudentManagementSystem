@@ -1,11 +1,10 @@
 <style>
 .container {
-    width: 350px;
-    margin: 100px auto;
+    width: 400px;
+    margin-top: 80px;
+    margin-left: 320px;
     background: white;
     padding: 25px;
-    border-radius: 10px;
-    text-align: center;
 }
 input, button {padding:10px;width:100%;margin-top:10px;}
 button {background:red;color:white;border:none;}
@@ -14,7 +13,7 @@ button:hover {background:darkred;}
 
 <body>
 
-<jsp:include page="welcome.jsp"/>
+<jsp:include page="sidebar.jsp"/>
 
 <div class="container">
 

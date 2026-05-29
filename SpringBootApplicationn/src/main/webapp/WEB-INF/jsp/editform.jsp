@@ -28,7 +28,7 @@ button:hover {
 
 <body>
 
-<jsp:include page="welcome.jsp"/>
+<jsp:include page="sidebar.jsp"/>
 
 <div class="container">
 
